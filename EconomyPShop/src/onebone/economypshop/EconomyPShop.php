@@ -205,7 +205,7 @@ class EconomyPShop extends PluginBase implements Listener{
 					$player->sendMessage($this->getMessage("shop-owner-no-account"));
 				}
 				$event->setCancelled();
-				if($event->getItem()->isPlaceable()){
+				if($event->getItem()->canbePlaceable()){
 					$this->placeQueue[$player->getName()] = true;
 				}
 			}else{
