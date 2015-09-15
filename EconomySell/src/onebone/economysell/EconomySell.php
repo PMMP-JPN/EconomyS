@@ -203,7 +203,7 @@ class EconomySell extends PluginBase implements Listener {
 				$player->sendMessage($this->getMessage("no-item"));
 			}
 			$event->setCancelled(true);
-			if($event->getItem()->canbePlaceable()){
+			if($event->getItem()->canBePlaced()){
 				$this->placeQueue [$player->getName()] = true;
 			}
 		}
